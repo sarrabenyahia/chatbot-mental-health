@@ -1,8 +1,6 @@
 import json
 import nltk
 from nltk.corpus import wordnet
-
-
 from transformers import PegasusForConditionalGeneration, PegasusTokenizerFast
 
 model = PegasusForConditionalGeneration.from_pretrained("tuner007/pegasus_paraphrase")
@@ -49,7 +47,7 @@ for intent in data['intents']:
     intent['patterns'] = new_patterns
 
 # Save the updated json
-with open('updated_mentalhealth.json', 'w') as json_file:
+with open('Dataset/updated_mentalhealth.json', 'w') as json_file:
     json.dump(data, json_file)
 
 

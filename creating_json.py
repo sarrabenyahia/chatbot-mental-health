@@ -32,19 +32,3 @@ intents_json = json.dumps({"intents": intents})
 with open("Dataset/intents.json", "w") as f:
     f.write(intents_json)
 
-
-
-"a effacer"
-# read json file
-with open('Dataset/intents.json', 'r') as json_file:
-    json_data = json.load(json_file)
-
-# write json data to csv file
-with open('Dataset/intents.csv', 'w', newline='') as csv_file:
-    csv_writer = csv.writer(csv_file)
-
-    # write header
-    csv_writer.writerow(['tag', 'patterns', 'responses', 'context'])
-    
-    for intent in json_data['intents']:
-        csv_writer.writerow([intent['tag'], intent['patterns'], intent['responses'], intent['context']])
