@@ -1,2 +1,2 @@
-# chatbot-win-the-argument
+# Mental Health Chatbot
 Toy project - Mental Health Chatbot
